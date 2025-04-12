@@ -1,0 +1,142 @@
+/* Professional Color Scheme (Based on typical energy/tech colors) */
+:root {
+    --primary-dark: #1A3C27;    /* Deep forest green */
+    --primary-light: #EFF7EE;   /* Light energy green */
+    --accent-gold: #C5A047;     /* Professional gold accent */
+    --text-dark: #2D2D2D;       /* Professional dark gray */
+}
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--primary-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header Styles */
+header {
+    background: var(--primary-dark);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 60px;
+    margin: 1rem 0;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* Team Sections */
+.team-section, .leadership-section, .design-section {
+    padding: 4rem 0;
+}
+
+h2 {
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+}
+
+.department h3 {
+    color: var(--primary-dark);
+    margin: 2rem 0 1.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.member-card {
+    background: white;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    flex: 1 1 280px;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-card h3 {
+    color: var(--primary-dark);
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+}
+
+.member-card p {
+    color: #666;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .team-members {
+        flex-direction: column;
+    }
+    
+    .member-card {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
